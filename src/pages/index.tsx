@@ -2,10 +2,15 @@ import type { NextPage } from "next";
 import { Button } from "../components/Button";
 import { PageTitle } from "../components/PageTitle";
 import { Paragraph } from "../components/Paragraph";
+import { SEO } from "../components/SEO";
 
 const Home: NextPage = () => {
   return (
     <div className="container">
+      <SEO
+        title="hinariocentral - o portal de hinos evangélicos"
+        excludeTitleSuffix
+      />
       <PageTitle title="Em breve!" />
       <Paragraph>
         Estamos preparando o maior banco de dados de hinos evangélicos em língua
