@@ -11,7 +11,7 @@ type SEOProps = {
 export function SEO({
   title,
   description = "",
-  image = "",
+  image,
   excludeTitleSuffix = false,
   indexPage = true,
 }: SEOProps) {
@@ -19,8 +19,7 @@ export function SEO({
     !excludeTitleSuffix ? " | hinariocentral" : ""
   }`;
   const pageImage =
-    `${process.env.NEXT_PUBLIC_SITE_URL}/images/` +
-    (image ?? "/images/thumb.png");
+    `${process.env.NEXT_PUBLIC_SITE_URL}/images/` + (image ?? "thumb.png");
 
   return (
     <Head>
