@@ -1,10 +1,9 @@
-import type { NextPage } from "next";
-import { Button } from "../components/Button";
-import { PageTitle } from "../components/PageTitle";
-import { Paragraph } from "../components/Paragraph";
-import { SEO } from "../components/SEO";
+import { Button } from '../components/Button';
+import { PageTitle } from '../components/PageTitle';
+import { Paragraph } from '../components/Paragraph';
+import { SEO } from '../components/SEO';
 
-const Home: NextPage = () => {
+export function Home() {
   return (
     <div className="container">
       <SEO
@@ -22,7 +21,7 @@ const Home: NextPage = () => {
         já muito esquecida e pouco explorada pelas instituições religiosas em
         geral. Para isso, comecei naquela época a escrever as partituras
         clássicas dos hinos tradicionais para impressão de alta qualidade em
-        PDF, utilizando o{" "}
+        PDF, utilizando o{' '}
         <a
           className="link"
           href="https://lilypond.org"
@@ -45,14 +44,11 @@ const Home: NextPage = () => {
         Para não perder o lançamento desta novidade, recomendo assinar nossa
         newsletter!
       </Paragraph>
-      <Button
-        className="flex mx-auto my-4 sm:my-6 md:my-8"
-        onClick={() => alert("Hello")}
-      >
+      <Button className="flex mx-auto my-4 sm:my-6 md:my-8">
         Assinar newsletter
       </Button>
     </div>
   );
-};
+}
 
 export default Home;

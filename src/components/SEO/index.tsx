@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head';
 
 type SEOProps = {
   title: string;
@@ -10,16 +10,17 @@ type SEOProps = {
 
 export function SEO({
   title,
-  description = "",
+  description,
   image,
-  excludeTitleSuffix = false,
-  indexPage = true,
+  excludeTitleSuffix,
+  indexPage,
 }: SEOProps) {
   const pageTitle = `${title} ${
-    !excludeTitleSuffix ? " | hinariocentral" : ""
+    !excludeTitleSuffix ? ' | hinariocentral' : ''
   }`;
-  const pageImage =
-    `${process.env.NEXT_PUBLIC_SITE_URL}/images/` + (image ?? "thumb.png");
+  const pageImage = `${process.env.NEXT_PUBLIC_SITE_URL}/images/${
+    image ?? 'thumb.png'
+  }`;
 
   return (
     <Head>
@@ -59,3 +60,10 @@ export function SEO({
     </Head>
   );
 }
+
+SEO.defaultProps = {
+  description: 'hinariocentral - o portal de hinos evangélicos',
+  image: '',
+  excludeTitleSuffix: false,
+  indexPage: true,
+};
